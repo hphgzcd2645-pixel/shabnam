@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SHABNAM COSMETIC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #E8E4FF;
+    --ink: #1A1545;
+    --muted: #5B5686;
+    --paper: #FFFFFF;
+    --insta: #FF5C8A;
+    --tele: #2AABEE;
+    --place: #FFB020;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --bg: #14102E; --ink: #F2EFFF; --muted: #B6B0E6; --paper: #231D52; }
+  }
+  :root[data-theme="dark"] { --bg: #14102E; --ink: #F2EFFF; --muted: #B6B0E6; --paper: #231D52; }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { min-height: 100%; }
+  body {
+    font-family: "Vazirmatn", Tahoma, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.8;
+    display: grid;
+    place-items: center;
+    padding: calc(40px + env(safe-area-inset-top, 0px)) 20px calc(40px + env(safe-area-inset-bottom, 0px));
+    position: relative;
+    overflow-x: hidden;
+  }
+  /* the one memorable shape: a big soft blob behind the title */
+  body::before {
+    content: "";
+    position: fixed;
+    width: 520px; height: 520px;
+    top: -180px; inset-inline-start: -160px;
+    background: var(--insta);
+    border-radius: 58% 42% 63% 37% / 45% 55% 45% 55%;
+    opacity: .35;
+    z-index: 0;
+  }
+  body::after {
+    content: "";
+    position: fixed;
+    width: 380px; height: 380px;
+    bottom: -140px; inset-inline-end: -120px;
+    background: var(--tele);
+    border-radius: 41% 59% 38% 62% / 56% 44% 56% 44%;
+    opacity: .3;
+    z-index: 0;
+  }
+  main { position: relative; z-index: 1; width: 100%; max-width: 440px; }
+  h1 {
+    font-size: clamp(2.6rem, 11vw, 3.6rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+  .tagline { color: var(--muted); margin-bottom: 36px; }
+  ul { list-style: none; padding: 0; display: grid; gap: 14px; }
+  .row {
+    display: flex; align-items: center; gap: 16px;
+    width: 100%; font: inherit; text-align: start; cursor: pointer;
+    background: var(--paper);
+    color: inherit; text-decoration: none;
+    padding: 16px 18px;
+    border-radius: 22px;
+    box-shadow: 0 6px 0 var(--ink);
+    border: 2px solid var(--ink);
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .row:hover { transform: translateY(3px); box-shadow: 0 3px 0 var(--ink); }
+  .row:active { transform: translateY(6px); box-shadow: 0 0 0 var(--ink); }
+  .row:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
+  .icon {
+    flex: none;
+    width: 52px; height: 52px;
+    border-radius: 16px;
+    display: grid; place-items: center;
+    border: 2px solid var(--ink);
+  }
+  .icon svg { width: 26px; height: 26px; stroke: #1A1545; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .insta .icon { background: var(--insta); }
+  .tele  .icon { background: var(--tele); }
+  .place .icon { background: var(--place); }
+  .phone .icon { background: #5BE0A8; }
+  .text { min-width: 0; }
+  .label { font-size: .85rem; color: var(--muted); display: block; }
+  .value { font-weight: 600; font-size: 1.05rem; overflow-wrap: anywhere; }
+  .latin { direction: ltr; unicode-bidi: isolate; display: inline-block; }
+  @media (prefers-reduced-motion: reduce) { .row { transition: none; } }
+</style>
+</head>
+<body>
+<main>
+  <h1><span class="latin">SHABNAM COSMETIC</span></h1>
+  <p class="tagline">خرید حضوری و آنلاین</p>
+
+  <ul>
+    <!-- ✏️ لینک و آیدی اینستاگرام را عوض کنید -->
+    <li>
+      <a class="row insta" href="https://instagram.com/shabnam_cosmetics_" target="_blank" rel="noopener">
+        <span class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#1A1545"/></svg>
+        </span>
+        <span class="text">
+          <span class="label">اینستاگرام</span>
+          <span class="value latin">@shabnam_cosmetics_</span>
+        </span>
+      </a>
+    </li>
+
+    <!-- ✏️ شماره تماس را عوض کنید (در لینک و متن) -->
+    <li>
+      <a class="row phone" href="tel:09121230334">
+        <span class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </span>
+        <span class="text">
+          <span class="label">شماره تماس</span>
+          <span class="value latin">09121230334</span>
+        </span>
+      </a>
+    </li>
+
+    <!-- ✏️ آدرس را عوض کنید؛ با لمس کردن کپی می‌شود -->
+    <li>
+      <button type="button" class="row place" id="copy-address">
+        <span class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        </span>
+        <span class="text">
+          <span class="label" id="addr-label" aria-live="polite">آدرس (برای کپی لمس کنید)</span>
+          <span class="value" id="addr">تهران، شهریار، خیابان ولیعصر، چهارراه مخابرات، سمت چپ، آرایشی شبنم (رستمی)</span>
+        </span>
+      </button>
+    </li>
+  </ul>
+</main>
+<script>
+  (function () {
+    var btn = document.getElementById('copy-address');
+    var addr = document.getElementById('addr').textContent.trim();
+    var label = document.getElementById('addr-label');
+    var original = label.textContent;
+    var timer;
+
+    function show(msg) {
+      label.textContent = msg;
+      clearTimeout(timer);
+      timer = setTimeout(function () { label.textContent = original; }, 1800);
+    }
+
+    function fallbackCopy() {
+      var ta = document.createElement('textarea');
+      ta.value = addr;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta);
+      show(ok ? 'کپی شد ✓' : 'کپی نشد، دستی کپی کنید');
+    }
+
+    btn.addEventListener('click', function () {
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(addr).then(
+          function () { show('کپی شد ✓'); },
+          fallbackCopy
+        );
+      } else {
+        fallbackCopy();
+      }
+    });
+  })();
+</script>
+</body>
+</html>
